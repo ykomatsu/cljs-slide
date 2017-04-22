@@ -1,0 +1,110 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<title>ClojureScriptについての何か</title>
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css">
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<h1>ClojureScriptについての何か</h1>
+					<p>第1回関西Lispユーザー会</p>
+					<p>Yoshito Komatsu</p>
+				</section>
+				<section>
+					<h1>Clojureとは</h1>
+				</section>
+				<section>
+					<ul>
+						<li>Java仮想マシンの上で動くLispの方言の一つ</li>
+						<li>Rich Hickeyさんが開発した</li>
+						<li>他のLispの方言との互換性はあまり考えない</li>
+					</ul>
+				</section>
+				<section>
+					<p>（OSではなく）仮想マシンをプラットフォームとする</p>
+					<p>↓</p>
+					<p>仮想マシンの提供する便利な機能を使うことができる</p>
+				</section>
+				<section>
+					<h1>他のプラットフォーム向けのClojure<h1>
+				</section>
+				<section>
+					<ul>
+						<li>ClojureCLR（CLR向け）</li>
+						<li>ClojureScript（JavaScriptエンジン向け）</li>
+					</ul>
+				</section>
+				<section>
+					<h1>ClojureScriptとは</h1>
+				</section>
+				<section>
+					<ul>
+						<li>JavaScriptエンジンの上で動くClojure
+							<ul>
+								<li>Clojure→（コンパイル）→JavaScript</li>
+							</ul>
+						</li>
+						<li>内部でGoogle Closure Toolsを使っている</li>
+						<li>主にウェブブラウザー向けとして使われているがNode.js向けとしても使うことができる
+							<ul>
+								<li>最近はNode.js向けも盛り上がっているような気がする</li>
+							</ul>
+						</li>
+					</ul>
+				</section>
+				<section>
+					<h1>デモンストレーション1</h1>
+				</section>
+				<section>
+					<p>元々ClojureScriptコンパイラーはClojureで書かれていた</p>
+					<p>↓</p>
+					<p>Java仮想マシンの上で動く<p>
+				</section>
+				<section>
+					<p>ClojureScriptコンパイラーをJavaScriptエンジンの上で動くようにすると面白いのでは</p>
+					<p>↓</p>
+					<p>できるようになった（いわゆるセルフホスティング）</p>
+				</section>
+				<section>
+					<h1>デモンストレーション2</h1>
+				</section>
+				<section>
+					<h1>デモンストレーション3</h1>
+				</section>
+				<section>
+					<p><a href="https://github.com/athos/japanese-clojure-companies">日本でClojure／ClojureScriptを利用している会社一覧</a></p>
+				</section>
+			</div>
+		</div>
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+		<script>
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				history: true,
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
